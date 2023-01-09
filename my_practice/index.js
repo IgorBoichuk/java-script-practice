@@ -126,23 +126,35 @@
 // findLongestWord();
 // ---------------------------------------------Питання
 
-function createArrayOfNumbers(min, max) {
-  max = 8;
-  min = 1;
-  const numbers = [min, max];
+// function createArrayOfNumbers(min, max) {
+//   max = 8;
+//   min = 1;
+//   let params = [min, max];
+//   const numbers = [];
+//   // Change code below this line
+
+//   for (let i = min; i <= max; i += 1) {
+//     numbers.push(i);
+//   }
+
+//   console.log(numbers);
+// }
+// createArrayOfNumbers();
+
+function filterArray(numbers, value) {
   // Change code below this line
+  numbers = [12, 24, 8, 41, 76];
+  value = 38;
+  let arr = [];
 
-  const names2 = [];
-  for (const name of numbers) {
-    names2.push(name);
+  for (number of numbers) {
+    if (value < number) {
+      arr.push(number);
+      // console.log(number);
+    }
   }
-  numbers[0] = 3;
+  console.log(arr);
 
-  // const char = numbers.push(5);
-  // console.log(char);
-  console.log(numbers);
-  console.log(names2);
   // Change code above this line
-  return numbers;
 }
-createArrayOfNumbers();
+filterArray();
