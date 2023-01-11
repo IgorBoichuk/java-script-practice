@@ -367,17 +367,122 @@
 //   // Change code above this line
 // };
 
-const apartment = {
-  descr: "Spacious apartment in the city center",
-  rating: 4,
-  price: 2153,
-};
-const keys = [];
-const values = [];
-// Change code below this line
-for (const key in apartment) {
-  keys.push(key);
-  values.push(apartment[key]);
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
+// const keys = [];
+// const values = [];
+// // Change code below this line
+// for (const key in apartment) {
+//   keys.push(key);
+//   values.push(apartment[key]);
+// }
+// console.log(keys);
+// console.log(values);
+
+// Виконай рефакторинг рішення попереднього завдання, додавши в
+// цикл for...in перевірку на власну властивість.
+
+// const keys = [];
+// const values = [];
+// const advert = {
+//   service: "apt",
+// };
+// const apartment = Object.create(advert);
+// apartment.descr = "Spacious apartment in the city center";
+// apartment.rating = 4;
+// apartment.price = 2153;
+
+// // Change code below this line
+
+// for (const key in apartment) {
+//   if (apartment.hasOwnProperty(key)) {
+//     console.log(apartment.hasOwnProperty(key));
+//     keys.push(key);
+//     values.push(apartment[key]);
+//     console.log(key);
+//     console.log(apartment[key]);
+//   }
+
+//   // Change code above this line
+// }
+
+// Напиши функцію countProps(object), яка рахує і повертає
+// кількість власних властивостей об'єкта в параметрі object.
+//  Використовуй змінну propCount для зберігання кількості властивостей об'єкта.
+// Оголошена функція countProps(object)
+// Виклик countProps({}) повертає 0
+// Виклик countProps({ name: "Mango", age: 2 }) повертає 2
+// Виклик countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }) повертає 3
+// Функція підраховує тільки власні властивості об'єкта
+
+// function countProps(object) {
+//   object = { mail: "poly@mail.com", isOnline: true, score: 500 };
+//   let propCount = 0;
+//   // Change code below this line
+//   for (const key in object) {
+//     if (object.hasOwnProperty(key)) {
+//       propCount = propCount + 1;
+//     }
+//   }
+//   console.log(propCount);
+//   console.log(object);
+//   // Change code above this line
+//   return propCount;
+// }
+// countProps();
+
+// Перебери об'єкт apartment, використовуючи метод Object.keys() і цикл for...of.
+// Запиши у змінну keys масив ключів власних властивостей об'єкта apartment,
+// і додай в масив values всі значення його властивостей.
+
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
+// const values = [];
+// // Change code below this line
+// const keys = Object.keys(apartment);
+
+// for (let key of keys) {
+//   values.push(apartment[key]);
+// }
+// console.log(keys);
+// console.log(values);
+
+// Вбудований клас Object має кілька корисних методів для роботи з
+//  об'єктами. Перший з них - це Object.keys(obj), який приймає об'єкт і
+//  повертає масив ключів його власних властивостей.Якщо в об'єкті немає
+//  властивостей, метод поверне порожній масив
+
+// Завдання 14/41
+//
+
+// Виконай рефакторинг функції countProps(object), використовуючи метод Object.keys() і,
+//   можливо, але не обов'язково, цикл for...of.
+
+// Оголошена функція countProps(object)
+// Виклик countProps({}) повертає 0
+// Виклик countProps({ name: "Mango", age: 2 }) повертає 2
+// Виклик countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }) повертає 3
+// Функція підраховує тільки власні властивості об'єкта
+// Функція використовує метод Object.keys() і, можливо, цикл for...of
+
+function countProps(object) {
+  object = { mail: "poly@mail.com", isOnline: true, score: 500 };
+  // Change code below this line
+  let propCount = 0;
+
+  for (const key in object) {
+    if (object.hasOwnProperty(key)) {
+      propCount += 1;
+    }
+  }
+  console.log(propCount);
+  return propCount;
+  // Change code above this line
 }
-console.log(keys);
-console.log(values);
+countProps();
