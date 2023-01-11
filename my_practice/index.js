@@ -302,18 +302,82 @@
 
 // У функції includes використовується for, return, але не метод масиву includes
 
-function includes(array, value) {
-  // Change code below this line
-  array = ["Earth", "Mars", "Venus", "Jupiter", "Saturn"];
-  value = "Jupiter";
-  for (item of array) {
-    if (item === value) {
-      return true;
-    } else {
-      return false;
-    }
-  }
+// function includes(array, value) {
+//   // Change code below this line
+//   array = ["Earth", "Mars", "Venus", "Jupiter", "Saturn", "Jupiter"];
+//   value = "Jupiter";
+//   // for (let i = 0; (i = array.indexOf(value)); i += 1)
+//   for (let item of array) {
+//     if (item === value) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
+// console.log(includes());
 
-  // Change code above this line
+// Додай об'єкту apartment кілька нових властивостей:
+
+// area - площа в квадратних метрах, число 60;
+// rooms - кількість кімнат, число 3;
+// location - місце розташування квартири, об'єкт з наступними вкладеними властивостями;
+// country - країна, рядок "Jamaica";
+// city - місто, рядок "Kingston".
+
+// const apartment = {
+//   imgUrl: "https://via.placeholder.com/640x480",
+//   descr: "Spacious apartment in the city center",
+//   rating: 4.7,
+//   price: 5000,
+//   tags: ["premium", "promoted", "top", "trusted"],
+//   owner: {
+//     name: "Henry Sibola",
+//     phone: "982-126-1588",
+//     email: "henry.carter@aptmail.com",
+//   },
+// };
+
+// apartment.area = 60;
+// apartment.rooms = 3;
+// apartment.location = {};
+// apartment.location.country = "Jamaica";
+// apartment.location.city = "Kingston";
+
+// console.log(apartment.area);
+// console.log(apartment.rooms);
+// console.log(apartment.location.country);
+// console.log(apartment.location.city);
+// console.log(apartment);
+
+// Доповни код оголошення об'єкта credentials таким чином, щоб в результаті
+// у нього були дві властивості: email і password, імена яких зберігаються у
+// змінних emailInputName і passwordInputName.
+
+// Значенням властивості email повинен бути рядок "henry.carter@aptmail.com",
+//  а значенням властивості password - рядок "jqueryismyjam".
+
+// const emailInputName = "email";
+// const passwordInputName = "password";
+
+// const credentials = {
+//   // Change code below this line
+// [emailInputName]: "henry.carter@aptmail.com",
+// [passwordInputName]: "jqueryismyjam",
+
+//   // Change code above this line
+// };
+
+const apartment = {
+  descr: "Spacious apartment in the city center",
+  rating: 4,
+  price: 2153,
+};
+const keys = [];
+const values = [];
+// Change code below this line
+for (const key in apartment) {
+  keys.push(key);
+  values.push(apartment[key]);
 }
-console.log(includes());
+console.log(keys);
+console.log(values);
