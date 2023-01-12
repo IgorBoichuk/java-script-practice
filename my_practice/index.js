@@ -677,3 +677,108 @@
 //
 //
 //
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+// // Change code below this line
+
+// // const highYesterday = highTemperatures.yesterday;
+// // const highToday = highTemperatures.today;
+// // const highTomorrow = highTemperatures.tomorrow;
+// // const highIcon = highTemperatures.icon;
+// console.log(highTemperatures.yesterday);
+// const {
+//   yesterday: highYesterday,
+//   today: highToday,
+//   tomorrow: highTomorrow,
+//   highIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg",
+// } = highTemperatures;
+
+// // Change code above this line
+// const meanTemperature = (highYesterday + highToday + highTomorrow) / 3;
+// console.log(meanTemperature);
+// const forecast = {
+//   today: {
+//     low: 28,
+//     high: 32,
+//     icon: "https://www.flaticon.com/svg/static/icons/svg/861/861059.svg",
+//   },
+//   tomorrow: {
+//     low: 27,
+//     high: 31,
+//   },
+// };
+// Change code below this line
+
+// const highToday = forecast.today.high;
+// const lowToday = forecast.today.low;
+// const todayIcon = forecast.today.icon;
+
+// const highTomorrow = forecast.tomorrow.high;
+// const lowTomorrow = forecast.tomorrow.low;
+// const tomorrowIcon = forecast.tomorrow.icon;
+
+// const {
+//   today: {
+//     low: lowToday,
+//     high: highToday,
+//     icon: todayIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg",
+//   },
+//   tomorrow: {
+//     low: lowTomorrow,
+//     high: highTomorrow,
+//     icon: tomorrowIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg",
+//   },
+// } = forecast;
+
+// console.log(forecast);
+// console.log(forecast.today);
+// console.log(forecast.tomorrow);
+
+//
+//
+//
+//
+//
+//
+//
+
+// Функція calculateMeanTemperature(forecast) приймає
+// один параметр forecast - об'єкт температур на два дні
+// наступного формату.
+
+// {
+//   today: { low: 10, high: 20 },
+//   tomorrow: { low: 20, high: 30 }
+// }
+
+// Заміни оголошення змінних todayLow, todayHigh, tomorrowLow і
+// tomorrowHigh однією операцією деструктуризації властивостей об'єкта
+// forecast
+
+function calculateMeanTemperature(forecast) {
+  //   const todayLow = forecast.today.low;
+  //   const todayHigh = forecast.today.high;
+  //   const tomorrowLow = forecast.tomorrow.low;
+  //   const tomorrowHigh = forecast.tomorrow.high;
+
+  const {
+    today: { low: todayLow, high: todayHigh },
+    tomorrow: { low: tomorrowLow, high: tomorrowHigh },
+  } = forecast;
+
+  console.log(forecast);
+  console.log(todayLow);
+  console.log(todayHigh);
+
+  // Change code above this line
+
+  console.log((todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4);
+  //   return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
+}
+calculateMeanTemperature({
+  today: { low: 28, high: 32 },
+  tomorrow: { low: 25, high: 29 },
+});
