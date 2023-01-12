@@ -472,7 +472,6 @@
 // Функція підраховує тільки власні властивості об'єкта
 // Функція використовує метод Object.keys() і, можливо, цикл for...of
 
-<<<<<<< Updated upstream
 // function countProps(object) {
 //   object = { mail: "poly@mail.com", isOnline: true, score: 500 };
 //   // Change code below this line
@@ -652,24 +651,29 @@
 //   // Change code above this line
 // }
 // console.log(calculateTotalPrice("Scanner"));
-=======
-function countProps(object) {
-  object = { mail: "poly@mail.com", isOnline: true, score: 500 };
-  // Change code below this line
-  let propCount = 0;
-  const itemsObject = Object.keys(object);
 
-  for (const key in object) {
-    if (object.hasOwnProperty(key)) {
-      propCount += 1;
-    }
-    console.log(object.hasOwnProperty(key));
-  }
+// ------------------------------------------Деструктуризація
 
-  console.log(itemsObject);
-  console.log(propCount);
-  return propCount;
-  // Change code above this line
-}
-countProps();
->>>>>>> Stashed changes
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+// // Change code below this line
+
+// // const yesterday = highTemperatures.yesterday;
+// // const today = highTemperatures.today;
+// // const tomorrow = highTemperatures.tomorrow;
+
+// const { yesterday, today, tomorrow } = highTemperatures;
+
+// // Change code above this line
+// const meanTemperature = (yesterday + today + tomorrow) / 3;
+
+// // console.log(meanTemperature);
+// console.log(yesterday);
+
+//
+//
+//
+//
