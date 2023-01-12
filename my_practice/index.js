@@ -461,7 +461,8 @@
 // Завдання 14/41  --------------------------------------------------------------
 //
 
-// Виконай рефакторинг функції countProps(object), використовуючи метод Object.keys() і,
+// Виконай рефакторинг функції countProps(object), використовуючи метод
+// Object.keys() і,
 //   можливо, але не обов'язково, цикл for...of.
 
 // Оголошена функція countProps(object)
@@ -471,6 +472,7 @@
 // Функція підраховує тільки власні властивості об'єкта
 // Функція використовує метод Object.keys() і, можливо, цикл for...of
 
+<<<<<<< Updated upstream
 // function countProps(object) {
 //   object = { mail: "poly@mail.com", isOnline: true, score: 500 };
 //   // Change code below this line
@@ -650,3 +652,24 @@
 //   // Change code above this line
 // }
 // console.log(calculateTotalPrice("Scanner"));
+=======
+function countProps(object) {
+  object = { mail: "poly@mail.com", isOnline: true, score: 500 };
+  // Change code below this line
+  let propCount = 0;
+  const itemsObject = Object.keys(object);
+
+  for (const key in object) {
+    if (object.hasOwnProperty(key)) {
+      propCount += 1;
+    }
+    console.log(object.hasOwnProperty(key));
+  }
+
+  console.log(itemsObject);
+  console.log(propCount);
+  return propCount;
+  // Change code above this line
+}
+countProps();
+>>>>>>> Stashed changes
