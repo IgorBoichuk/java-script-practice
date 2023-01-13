@@ -1104,10 +1104,12 @@ const bookShelf = {
     newName = "Dungeon chronicles";
 
     // Change code below this line
-    bookShelf.books.splice(bookShelf.books.indexOf(oldName), 1);
-
+    // bookShelf.books.splice(bookShelf.books.indexOf(oldName), 1);
+    books.splice(0, 1, "kurcza");
+    return;
     // Change code above this line
   },
 };
 console.log(bookShelf.books);
 console.log(bookShelf.books.indexOf("Haze"));
+console.log(bookShelf.books.splice(1, 1, "kurcza"));
