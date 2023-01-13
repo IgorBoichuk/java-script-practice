@@ -758,27 +758,356 @@
 // tomorrowHigh однією операцією деструктуризації властивостей об'єкта
 // forecast
 
-function calculateMeanTemperature(forecast) {
-  //   const todayLow = forecast.today.low;
-  //   const todayHigh = forecast.today.high;
-  //   const tomorrowLow = forecast.tomorrow.low;
-  //   const tomorrowHigh = forecast.tomorrow.high;
+// function calculateMeanTemperature(forecast) {
+//   //   const todayLow = forecast.today.low;
+//   //   const todayHigh = forecast.today.high;
+//   //   const tomorrowLow = forecast.tomorrow.low;
+//   //   const tomorrowHigh = forecast.tomorrow.high;
 
-  const {
-    today: { low: todayLow, high: todayHigh },
-    tomorrow: { low: tomorrowLow, high: tomorrowHigh },
-  } = forecast;
+//   const {
+//     today: { low: todayLow, high: todayHigh },
+//     tomorrow: { low: tomorrowLow, high: tomorrowHigh },
+//   } = forecast;
 
-  console.log(forecast);
-  console.log(todayLow);
-  console.log(todayHigh);
+//   console.log(forecast);
+//   console.log(todayLow);
+//   console.log(todayHigh);
 
-  // Change code above this line
+//   // Change code above this line
 
-  console.log((todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4);
-  //   return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
-}
-calculateMeanTemperature({
-  today: { low: 28, high: 32 },
-  tomorrow: { low: 25, high: 29 },
-});
+//   console.log((todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4);
+//   //   return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
+// }
+// calculateMeanTemperature({
+//   today: { low: 28, high: 32 },
+//   tomorrow: { low: 25, high: 29 },
+// });
+
+// У змінній scores зберігається масив результатів тестування.
+// Використовуючи розподіл і методи Math.max() і Math.min(), доповни
+// код таким чином, щоб у змінній bestScore був найвищий бал, а у
+// worstScore - найнижчий.
+
+// const scores = [89, 64, 42, 17, 93, 51, 26];
+// // Change code below this line
+// const bestScore = Math.max(...scores);
+// const worstScore = Math.min(...scores);
+
+// console.log(bestScore);
+// console.log(worstScore);
+
+//
+
+//
+
+//
+// У змінних firstGroupScores, secondGroupScores і thirdGroupScores
+// зберігаються результати тестування окремих груп. Використовуючи
+// розподіл, доповни код таким чином, щоб:
+
+// У змінній allScores зберігався масив всіх результатів від першої
+// до третьої групи.
+// У змінній bestScore був найвищий загальний бал.
+// У змінній worstScore був найнижчий загальний бал.
+
+//
+
+// const firstGroupScores = [64, 42, 93];
+// const secondGroupScores = [89, 14, 51, 26];
+// const thirdGroupScores = [29, 47, 18, 97, 81];
+// // Change code below this line
+// const allScores = [
+//   ...firstGroupScores,
+//   ...secondGroupScores,
+//   ...thirdGroupScores,
+// ];
+// const bestScore = Math.max(...allScores);
+// const worstScore = Math.min(...allScores);
+
+// console.log(allScores);
+// console.log(bestScore);
+// console.log(worstScore);
+
+//
+
+//
+
+//
+
+//
+
+// В конструкторі можна створювати нові тести, для яких є налаштування
+// за замовчуванням, які зберігаються у змінній defaultSettings. Під
+// час створення тесту, усі або частину налаштувань можна перевизначити,
+// вони зберігаються у змінній overrideSettings.
+
+// Для того щоб отримати фінальні налаштування тесту, необхідно взяти
+// налаштування за замовчуванням і поверх них застосувати перевизначені
+// налаштування. Доповни код таким чином, щоб у змінній finalSettings
+// утворився об'єкт фінальних налаштувань тесту.
+
+// const defaultSettings = {
+//   theme: "light",
+//   public: true,
+//   withPassword: false,
+//   minNumberOfQuestions: 10,
+//   timePerQuestion: 60,
+// };
+// const overrideSettings = {
+//   public: false,
+//   withPassword: true,
+//   timePerQuestion: 30,
+// };
+// // Change code below this line
+// const finalSettings = { ...defaultSettings, ...overrideSettings };
+
+// console.log(defaultSettings);
+// console.log(overrideSettings);
+// console.log(finalSettings);
+
+//
+
+//
+
+//
+
+//
+
+// Напиши функцію makeTask(data) яка приймає один параметр
+// data - об'єкт з наступними властивостями.
+
+// text - текст завдання.
+// category - категорія завдання.
+// priority - пріоритет завдання.
+// Функція повинна створити і повернути новий об'єкт завдання,
+// не змінюючи напряму параметр data. У новому об'єкті повинна
+// бути властивість completed, значення якої зберігається в однойменній
+// локальній змінній.
+
+// В параметрі data гарантовано буде тільки властивість text, а інші
+// дві, category і priority, можуть бути відсутніми. Тоді, в новому
+// об'єкті завдання, у властивостях category і priority повинні бути
+// значення за замовчуванням, що зберігаються в однойменних локальних змінних.
+
+// Оголошена функція makeTask(data)
+// Виклик makeTask({}) повертає { category: "General", priority: "Normal", completed: false }
+// Виклик makeTask({ category: "Homemade", priority: "Low", text: "Take out the trash" })
+// повертає { category: "Homemade", priority: "Low", text: "Take out the trash", completed: false }
+// Виклик makeTask({ category: "Finance", text: "Take interest" })
+// повертає { category: "Finance", priority: "Normal", text: "Take interest", completed: false }
+// Виклик makeTask({ priority: "Low", text: "Choose shampoo" })
+// повертає { category: "General", priority: "Low", text: "Choose shampoo", completed: false }
+// Виклик makeTask({ text: "Buy bread" })
+// повертає { category: "General", priority: "Normal", text: "Buy bread", completed: false }
+
+// function makeTask(data) {
+//   const completed = false;
+//   const category = "General";
+//   const priority = "Normal";
+//   // Change code below this line
+//   data = { category: "Homemade", priority: "Low", text: "Take out the trash" };
+//   defaultData = { completed, category, priority };
+//   // Change code above this line
+//   return { ...defaultData, ...data };
+// }
+// console.log(makeTask());
+
+//
+
+//
+
+//
+
+//
+// Використовуючи операцію rest, доповни код функції add() таким чином, щоб
+// вона приймала будь-яку кількість аргументів, рахувала і повертала їх суму.
+
+// Оголошена функція add
+// Функція add використовує параметр args
+// Для збирання аргументів у змінну args, у підписі функції використовується
+// синтаксис ... (оператор rest)
+// Виклик add(15, 27) повертає 42
+// Виклик add(12, 4, 11, 48) повертає 75
+// Виклик add(32, 6, 13, 19, 8) повертає 78
+// Виклик add(74, 11, 62, 46, 12, 36) повертає 241
+
+//
+// Change code below this line
+
+// function add(...args) {
+//   let summ = 0;
+//   for (let arg of args) {
+//     summ += arg;
+//   }
+//   return summ;
+//   // Change code above this line
+// }
+// console.log(add(74, 11, 62, 46, 12, 36));
+
+//
+//
+
+//
+//
+
+//
+//
+// Функція addOverNum() рахує суму всіх аргументів.
+// Зміни параметри і тіло функції addOverNum() таким чином, щоб вона
+// рахувала суму тільки тих аргументів, які більші за задане число.
+// Це число повинно бути першим параметром функції.
+
+// Оголошена функція addOverNum()
+// Виклик addOverNum(50, 15, 27) повертає 0
+// Виклик addOverNum(10, 12, 4, 11, 48, 10, 8) повертає 71
+// Виклик addOverNum(15, 32, 6, 13, 19, 8) повертає 51
+// Виклик addOverNum(20, 74, 11, 62, 46, 12, 36) повертає 218
+
+// Change code below this line
+// function addOverNum(...args) {
+//   let total = 0;
+
+//   for (const arg of args) {
+//     if (arg > args[0]) {
+//       total += arg;
+//     }
+//   }
+//   return total;
+//   // Change code above this line
+// }
+
+// console.log(addOverNum(50, 15, 27)); // має бути - 0
+// console.log(addOverNum(20, 74, 11, 62, 46, 12, 36)); // має бути - 218
+
+//
+
+//
+
+//
+
+//
+
+// Функція findMatches() приймає довільну кількість аргументів.
+// Першим аргументом завжди буде масив чисел, а решта аргументів будуть просто числами.
+
+// Доповни код функції таким чином, щоб вона повертала новий масив matches,
+// в якому будуть тільки ті аргументи, починаючи з другого, які є в масиві першого аргументу.
+
+// Наприклад, findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7) повинна повернути
+// масив [1, 2], тому що тільки вони є в масиві першого аргументу.
+
+// Оголошена функція findMatches()
+// Виклик findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7) повертає [1, 2]
+// Виклик findMatches([4, 89, 17, 36, 2], 8, 17, 89, 27, 2) повертає [17, 89, 2]
+// Виклик findMatches([10, 24, 41, 6, 9, 19], 24, 11, 9, 23, 41) повертає [24, 9, 41]
+// Виклик findMatches([63, 11, 8, 29], 4, 7, 16) повертає []
+
+// // Change code below this line
+// function findMatches(array, ...args) {
+//   // const a = addItems;
+//   // console.log(array);
+//   // console.log(args);
+//   const matches = []; // Don't change this line
+
+//   for (const arg of args) {
+//     // console.log(arg);
+//     if (array.includes(arg)) {
+//       matches.push(arg);
+//     }
+//   }
+
+//   // Change code above this line
+//   return matches;
+// }
+// console.log(findMatches([4, 89, 17, 36, 2], 8, 17, 89, 27, 2)); // повертає [17, 89, 2]
+
+//
+
+//
+
+//
+
+//
+
+//
+
+// Додай об'єкту bookShelf ще два методи, які поки що будуть повертати просто рядки
+// за аналогією з getBooks() і addBook(bookName).
+
+// Метод removeBook(bookName) буде видаляти книгу за назвою. Повертає рядок "Deleting
+// book <назва книги>", де <назва книги> - це значення параметра bookName.
+
+// Метод updateBook(oldName, newName) буде оновлювати назву книги на нову. Повертає
+// рядок "Updating book <стара назва> to <нова назва>", де <стара назва> і
+// <нова назва> - це значення параметрів oldName і newName відповідно.
+
+// Оголошена змінна bookShelf
+// Значення змінної bookShelf - це об'єкт
+// Значення властивості bookShelf.getBooks - це метод об'єкта
+// Виклик методу bookShelf.getBooks() повертає рядок "Returning all books"
+// Значення властивості bookShelf.addBook - це метод об'єкта
+// Виклик методу bookShelf.addBook("Haze") повертає рядок "Adding book Haze"
+// Значення властивості bookShelf.removeBook - це метод об'єкта
+// Виклик методу bookShelf.removeBook("Red sunset") повертає рядок "Deleting book Red sunset"
+// Значення властивості bookShelf.updateBook - це метод об'єкта
+// Виклик методу bookShelf.updateBook("Sands of dune", "Dune") повертає рядок
+// "Updating book Sands of dune to Dune"
+
+// const bookShelf = {
+//   // Change code below this line
+//   books: ["The last kingdom", "The guardian of dreams"],
+//   getBooks() {
+//     return "Returning all books";
+//   },
+//   addBook(bookName) {
+//     return `Adding book ${bookName}`;
+//   },
+//   removeBook() {
+//     return "Deleting book Red sunset";
+//   },
+//   updateBook() {
+//     return "Updating book Sands of dune to Dune";
+//   },
+//   // Change code above this line
+// };
+
+//
+
+//
+
+//
+
+//
+
+// Доповни метод updateBook(oldName, newName) таким чином, щоб він змінював
+// назву книги з oldName на newName у властивості books. Використовуй indexOf()
+// для того, щоб знайти потрібний елемент масиву, і splice() для того,
+// щоб замінити цей елемент.
+
+// Оголошена змінна bookShelf
+
+// Значення змінної bookShelf - це об'єкт
+
+// Значення властивості bookShelf.updateBook - це метод об'єкта
+
+// Після виклику методу bookShelf.updateBook("Haze", "Dungeon chronicles"), значення
+// властивості books - це масив ["The last kingdom", "Dungeon chronicles", "The guardian of dreams"]
+
+// Після виклику методу bookShelf.updateBook("The last kingdom", "Dune"), значення
+// властивості books - це масив ["Dune", "Haze", "The guardian of dreams"]
+
+const bookShelf = {
+  books: ["The last kingdom", "Haze", "The guardian of dreams"],
+
+  updateBook(oldName, newName) {
+    oldName = "Haze";
+    newName = "Dungeon chronicles";
+
+    // Change code below this line
+    bookShelf.books.splice(bookShelf.books.indexOf(oldName), 1);
+
+    // Change code above this line
+  },
+};
+console.log(bookShelf.books);
+console.log(bookShelf.books.indexOf("Haze"));
