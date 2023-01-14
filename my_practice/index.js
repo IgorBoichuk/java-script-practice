@@ -1127,19 +1127,75 @@
 
 //
 
-// До нас звернулася власниця крамниці зілля «У старої жаби»
-// і замовила програму для ведення інвентарю - додавання,
-// видалення, пошуку та оновлення зілля.
-// Додай об'єкту atTheOldToad властивість potions,
-// значенням якої зроби порожній масив.
+// Доповни метод removePotion(potionName) таким чином,
+// щоб він видаляв зілля potionName з масиву зілля у властивості potions.
 
 // Оголошена змінна atTheOldToad
 // Значення змінної atTheOldToad - це об'єкт
-// Значення властивості atTheOldToad.potions - це масив []
+// Значення властивості atTheOldToad.potions -
+//   це масив["Speed potion", "Dragon breath", "Stone skin"]
+// Значення властивості atTheOldToad.removePotion -
+//   це метод об'єкта
+// Після першого виклику методу
+// atTheOldToad.removePotion("Dragon breath"),
+//   у властивості potions буде масив["Speed potion", Stone skin"]
+// Після другого виклику методу
+// atTheOldToad.removePotion("Speed potion"),
+//   у властивості potions буде масив["Stone skin"]
+
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//   removePotion(potionName) {
+//     // Change code below this line
+//     for (item of this.potions) {
+//       if (potionName === item) {
+//         this.potions.splice(this.potions.indexOf(potionName), 1);
+//       }
+//     }
+//     console.log(potionName);
+//     // console.log(this.potions);
+//     return this.potions;
+//     // Change code above this line
+//   },
+// };
+
+// console.log(atTheOldToad.removePotion("Dragon breath"));
+
+//
+//
+
+//
+
+//
+
+//
+
+// Доповни метод updatePotionName(oldName, newName) таким чином,
+// щоб він оновлював назву зілля з oldName на newName в масиві
+// зілля у властивості potions.
+
+// Оголошена змінна atTheOldToad
+// Значення змінної atTheOldToad - це об'єкт
+// Значення властивості atTheOldToad.potions - це
+// масив["Speed potion", "Dragon breath", "Stone skin"]
+// Значення властивості atTheOldToad.updatePotionName - це метод об'єкта
+// Після першого виклику методу atTheOldToad.updatePotionName("Dragon breath", "Polymorth"),
+// у властивості potions буде масив["Speed potion", "Polymorth", "Stone skin"]
+// Після другого виклику методу atTheOldToad.updatePotionName("Stone skin", "Invisibility"),
+// у властивості potions буде масив["Speed potion", "Polymorth", "Invisibility"]
 
 const atTheOldToad = {
-  // Change code below this line
-  potions: [],
-
-  // Change code above this line
+  potions: ["Speed potion", "Dragon breath", "Stone skin"],
+  updatePotionName(oldName, newName) {
+    // Change code below this line
+    for (item of this.potions) {
+      if (item === oldName) {
+        this.potions.splice(this.potions.indexOf(oldName), 1, newName);
+      }
+    }
+    // Change code above this line
+    // console.log(this.potions);
+    return this.potions;
+  },
 };
+console.log(atTheOldToad.updatePotionName("Dragon breath", "Polymorth"));
