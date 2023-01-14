@@ -1096,20 +1096,50 @@
 // Після виклику методу bookShelf.updateBook("The last kingdom", "Dune"), значення
 // властивості books - це масив ["Dune", "Haze", "The guardian of dreams"]
 
-const bookShelf = {
-  books: ["The last kingdom", "Haze", "The guardian of dreams"],
+// const bookShelf = {
+//   books: ["The last kingdom", "Haze", "The guardian of dreams"],
+//   updateBook(oldName, newName) {
+//     // Change code below this line
+//     oldName = "Haze";
+//     newName = "qwewqeqwe";
+//     for (book of this.books) {
+//       if (oldName === book) {
+//         this.books.splice(this.books.indexOf(oldName), 1, newName);
+//       }
+//     }
+//     return bookShelf.books;
 
-  updateBook(oldName, newName) {
-    oldName = "Haze";
-    newName = "Dungeon chronicles";
+//     // Change code above this line
+//   },
+// };
+// console.log(bookShelf.updateBook());
 
-    // Change code below this line
-    // bookShelf.books.splice(bookShelf.books.indexOf(oldName), 1);
-    books.splice(0, 1, "kurcza");
-    return;
-    // Change code above this line
-  },
+// console.log(bookShelf.books.indexOf(oldName));
+// console.log(bookShelf.books.splice(1, 1, "qwewqeqwe"));
+
+//
+//
+//
+
+//
+
+//
+
+//
+
+// До нас звернулася власниця крамниці зілля «У старої жаби»
+// і замовила програму для ведення інвентарю - додавання,
+// видалення, пошуку та оновлення зілля.
+// Додай об'єкту atTheOldToad властивість potions,
+// значенням якої зроби порожній масив.
+
+// Оголошена змінна atTheOldToad
+// Значення змінної atTheOldToad - це об'єкт
+// Значення властивості atTheOldToad.potions - це масив []
+
+const atTheOldToad = {
+  // Change code below this line
+potions = []
+
+  // Change code above this line
 };
-console.log(bookShelf.books);
-console.log(bookShelf.books.indexOf("Haze"));
-console.log(bookShelf.books.splice(1, 1, "kurcza"));
