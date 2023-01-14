@@ -1139,7 +1139,7 @@
 
 const atTheOldToad = {
   // Change code below this line
-potions = []
+  potions: [],
 
   // Change code above this line
 };
