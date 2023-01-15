@@ -1228,36 +1228,54 @@ const atTheOldToad = {
     }
     return this.potions.push(newPotion);
   },
+
   removePotion(potionName) {
-    const potionIndex = this.potions.indexOf(potionName);
+    for (let i = 0; i < this.potions.length; i += 1) {
+      // console.log(i);
+      // console.log(potionName);
 
-    if (potionIndex === -1) {
-      return `Potion ${potionName} is not in inventory!`;
+      if (this.potions[i].name === potionName) {
+        // console.log(i);
+        // console.log(this.potions.splice(i, 1));
+
+        // console.log(this.potions);
+        // console.log(this.potions[i]);
+        return this.potions.splice(i, 1);
+      }
     }
-
-    this.potions.splice(potionIndex, 1);
+    // return `Potion ${potionName} is not in inventory!`;
   },
   updatePotionName(oldName, newName) {
-    const potionIndex = this.potions.indexOf(oldName);
+    for (let i = 0; i < this.potions.length; i += 1) {
+      // console.log(this.potions[i].name === oldName);
 
-    if (potionIndex === -1) {
-      return `Potion ${oldName} is not in inventory!`;
+      if (this.potions[i].name === oldName) {
+        console.log(i);
+        console.log((this.potions[i].name = newName));
+        return (this.potions[i].name = newName);
+        // return `Potion ${oldName} is not in inventory!`;
+      }
+
+      // console.log(this.potions.splice(potionIndex, 1, newName));
+      // return this.potions.splice(potionIndex, 1, newName);
     }
-
-    this.potions.splice(potionIndex, 1, newName);
+    return `Potion ${oldName} is not in inventory!`;
   },
   // Change code above this line
 };
-// newPotion = { name: "Dragon breath", price: 780 };
-newPotion = { name: "Invisibility", price: 620 };
+oldName = "Dragon breath";
+newName = "Polymorth";
+// newPotion = { name: "Stone skin", price: 240 };
+potionName = "Dragon breat";
+// newPotion = { name: "Invisibility", price: 620 };
 
-console.log(atTheOldToad.getPotions());
+// console.log(atTheOldToad.potions); ---------------як вивсести результат в консоль?
 // просто виводить масив об'єктів
-console.log(atTheOldToad.addPotion(newPotion));
+// console.log(atTheOldToad.addPotion(newPotion));
 // додає
-// console.log(atTheOldToad.addPotion({ name: "Stone skin", price: 240 }));
-// не змінює
 // console.log(atTheOldToad.addPotion({ name: "Dragon breath", price: 700 }));
 // повертає рядок "Error! Potion Dragon breath is already in your inventory!"
-// console.log(atTheOldToad.removePotion("Dragon breath"));
+// console.log(atTheOldToad.removePotion(potionName));
 // видаляє name: "Dragon breath", price: 700
+console.log(atTheOldToad.updatePotionName(oldName, newName));
+console.log(atTheOldToad.potions);
