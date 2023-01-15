@@ -1213,15 +1213,20 @@ const atTheOldToad = {
     { name: "Stone skin", price: 520 },
   ],
   // Change code below this line
+
   getPotions() {
     return this.potions;
   },
   addPotion(newPotion) {
-    if (this.potions.includes(newPotion)) {
-      return `Error! Potion ${newPotion} is already in your inventory!`;
-    }
+    for (item of this.potions) {
+      // console.log(Object.values(item));
+      // console.log(newPotion.name);
 
-    this.potions.push(newPotion);
+      if (Object.values(item).includes(newPotion.name)) {
+        return `Error! Potion ${newPotion.name} is already in your inventory!`;
+      }
+    }
+    return this.potions.push(newPotion);
   },
   removePotion(potionName) {
     const potionIndex = this.potions.indexOf(potionName);
@@ -1243,13 +1248,16 @@ const atTheOldToad = {
   },
   // Change code above this line
 };
+// newPotion = { name: "Dragon breath", price: 780 };
+newPotion = { name: "Invisibility", price: 620 };
+
 console.log(atTheOldToad.getPotions());
 // просто виводить масив об'єктів
-console.log(atTheOldToad.addPotion({ name: "Invisibility", price: 620 }));
+console.log(atTheOldToad.addPotion(newPotion));
 // додає
-console.log(atTheOldToad.addPotion({ name: "Stone skin", price: 240 }));
+// console.log(atTheOldToad.addPotion({ name: "Stone skin", price: 240 }));
 // не змінює
-console.log(atTheOldToad.addPotion({ name: "Dragon breath", price: 700 }));
+// console.log(atTheOldToad.addPotion({ name: "Dragon breath", price: 700 }));
 // повертає рядок "Error! Potion Dragon breath is already in your inventory!"
-console.log(atTheOldToad.removePotion("Dragon breath"));
+// console.log(atTheOldToad.removePotion("Dragon breath"));
 // видаляє name: "Dragon breath", price: 700
