@@ -1344,3 +1344,201 @@
 //   console.log(`Eating pizza ${pizzaName}`);
 // });
 // console.log(makePizza);
+
+//
+
+//
+
+//
+
+//
+
+// Необхідно написати логіку обробки замовлення піци.Виконай рефакторинг
+// методу order таким чином, щоб він приймав другим і третім параметром два
+// колбеки onSuccess і onError.
+
+// Якщо у властивості pizzas відсутня піца з назвою з параметра pizzaName,
+// метод order повинен повертати результат виклику колбека onError,
+// передаючи йому аргументом рядок "There is no pizza with a name <имя пиццы> in the assortment."
+// Якщо у властивості pizzas присутня піца з назвою з параметра pizzaName,
+// метод order повинен повертати результат виклику колбека onSuccess,
+// передаючи йому аргументом назву замовленої піци.
+// Після оголошення об'єкта pizzaPalace ми додали колбеки і виклики методів.
+// Будь ласка, нічого там не міняй.
+
+// Виклик pizzaPalace.order("Big Mike", makePizza, onOrderError)
+// повертає "Error! There is no pizza with a name Big Mike in the assortment."
+
+//
+
+// const pizzaPalace = {
+//   pizzas: ["Ultracheese", "Smoked", "Four meats"],
+//   order(pizzaName, makePizza, onOrderError) {
+//     for (item of this.pizzas) {
+//       if (item === pizzaName) {
+//         return makePizza(pizzaName);
+//       }
+//     }
+//     return onOrderError(
+//       `There is no pizza with a name ${pizzaName} in the assortment.`
+//     );
+//   },
+// };
+// // Change code above this line
+
+// // Callback for onSuccess
+// function makePizza(pizzaName) {
+//   return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+// }
+
+// // Callback for onError
+// function onOrderError(error) {
+//   return `Error! ${error}`;
+// }
+
+// // Method calls with callbacks
+// pizzaPalace.order("Smoked", makePizza, onOrderError);
+// pizzaPalace.order("Four meats", makePizza, onOrderError);
+// pizzaPalace.order("Big Mike", makePizza, onOrderError);
+// pizzaPalace.order("Vienna", makePizza, onOrderError);
+
+// console.log(pizzaPalace.order("Big Mike", makePizza, onOrderError));
+
+//
+
+//
+
+//
+
+//
+
+// Функція calculateTotalPrice(orderedItems) приймає один параметр
+// orderedItems - масив чисел, і розраховує загальну суму його елементів,
+// яка зберігається у змінній totalPrice і повертається як результат роботи функції.
+
+// Виконай рефакторинг функції таким чином, щоб замість циклу for, вона використовувала метод forEach.
+// Виклик функції calculateTotalPrice([412, 371, 94, 63, 176]) повертає 1116
+
+// function calculateTotalPrice(orderedItems) {
+//   let totalPrice = 0;
+//   // Change code below this line
+
+//   orderedItems.forEach(function (element) {
+//     totalPrice += element;
+//   });
+
+//   // стрілочна функція
+
+//   // orderedItems.forEach((element) => {
+//   //   totalPrice += element;
+//   // });
+
+//   // for (let i = 0; i < orderedItems.length; i += 1) {
+//   //   totalPrice += orderedItems[i];
+//   // }
+
+//   // Change code above this line
+//   return totalPrice;
+// }
+
+// console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
+
+//
+
+//
+
+//
+
+//
+
+// Функція filterArray(numbers, value) приймає масив чисел numbers і повертає
+// новий масив, в якому будуть тільки ті елементи оригінального масиву,
+// які більші за значення параметра value.
+
+// Виконай рефакторинг функції таким чином, щоб замість циклу for, вона використовувала метод forEach.
+// Виклик функції filterArray([12, 24, 8, 41, 76], 20) повертає [24, 41, 76]
+
+// function filterArray(numbers, value) {
+//   const filteredNumbers = [];
+//   // Change code below this line
+
+//   numbers.forEach((element) => {
+//     if (element > value) {
+//       filteredNumbers.push(element);
+//     }
+//   });
+
+//   // for (let i = 0; i < numbers.length; i += 1) {
+//   //   if (numbers[i] > value) {
+//   //     filteredNumbers.push(numbers[i]);
+//   //   }
+//   // }
+//   // Change code above this line
+//   return filteredNumbers;
+// }
+// console.log(filterArray([12, 24, 8, 41, 76], 20));
+
+//
+
+//
+
+//
+
+//
+
+//
+
+// Функція getCommonElements(firstArray, secondArray) приймає два масиви
+// довільної довжини в параметри firstArray і secondArray, і повертає
+// новий масив їхніх спільних елементів, тобто тих, які присутні в обох масивах.
+
+// Виконай рефакторинг функції таким чином, щоб замість циклу for, вона використовувала метод forEach.
+// Виклик getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]) повертає [12, 27, 3]
+
+// function getCommonElements(firstArray, secondArray) {
+//   const commonElements = [];
+//   // Change code below this line
+
+//   console.log(firstArray);
+//   firstArray.forEach((element) => {
+//     if (secondArray.includes(element)) {
+//       commonElements.push(element);
+//     }
+//   });
+
+//   // for (let i = 0; i < firstArray.length; i += 1) {
+//   //   if (secondArray.includes(firstArray[i])) {
+//   //     commonElements.push(firstArray[i]);
+//   //   }
+//   // }
+
+//   return commonElements;
+//   // Change code above this line
+// }
+// console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]));
+
+//
+
+//
+
+//
+
+//
+
+//
+
+// Виконай рефакторинг функції calculateTotalPrice(orderedItems),
+// замінивши її оголошення на стрілочну функцію.
+// Заміни колбек - функцію, передану в метод forEach(), на стрілочну функцію.
+
+// const calculateTotalPrice = (orderedItems) => {
+//   let totalPrice = 0;
+
+//   orderedItems.forEach((item) => {
+//     totalPrice += item;
+//   });
+
+//   return totalPrice;
+// };
+
+// console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
