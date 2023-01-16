@@ -1299,22 +1299,48 @@
 // Функція deliverPizza або makePizza буде передаватися як колбек і
 // очікувати аргументом ім'я готової піци, що доставляється.
 
-function deliverPizza(pizzaName) {
-  // pizzaName - "Karbonara";
-  console.log(pizzaName);
-  return `Delivering ${pizzaName} pizza.`;
-}
+// function deliverPizza(pizzaName) {
+//   // pizzaName - "Karbonara";
+//   console.log(pizzaName);
+//   return `Delivering ${pizzaName} pizza.`;
+// }
 
-function makePizza(pizzaName) {
-  return `Pizza ${pizzaName} is being prepared, please wait...`;
-}
+// function makePizza(pizzaName) {
+//   return `Pizza ${pizzaName} is being prepared, please wait...`;
+// }
 
-// Chande code below this line
-function makeMessage(pizzaName, callback) {
-  return callback(pizzaName);
-}
+// // Chande code below this line
+// function makeMessage(pizzaName, callback) {
+//   return callback(pizzaName);
+// }
 
-// console.log(deliverPizza);
-// console.log(makePizza("Karbonara"));
+// // console.log(deliverPizza);
+// // console.log(makePizza("Karbonara"));
 
-console.log(makeMessage);
+// console.log(makeMessage("Karbonara", deliverPizza));
+
+//
+
+//
+
+//
+
+//
+
+// Доповни другий виклик функції makePizza(pizzaName, callback), передавши другим
+// аргументом інлайн колбек-функцію eatPizza(pizzaName), яка логує рядок "Eating pizza <назва піци>".
+
+// function makePizza(pizzaName, callback) {
+//   console.log(`Pizza ${pizzaName} is being prepared, please wait...`);
+//   callback(pizzaName);
+// }
+
+// makePizza("Royal Grand", function deliverPizza(pizzaName) {
+//   console.log(`Delivering pizza ${pizzaName}.`);
+// });
+// // Change code below this line
+
+// makePizza("Ultracheese", function eatPizza(pizzaName) {
+//   console.log(`Eating pizza ${pizzaName}`);
+// });
+// console.log(makePizza);
