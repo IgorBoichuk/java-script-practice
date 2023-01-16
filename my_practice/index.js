@@ -1206,67 +1206,67 @@
 
 //
 
-const atTheOldToad = {
-  potions: [
-    { name: "Speed potion", price: 460 },
-    { name: "Dragon breath", price: 780 },
-    { name: "Stone skin", price: 520 },
-  ],
-  // Change code below this line
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Dragon breath", price: 780 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   // Change code below this line
 
-  getPotions() {
-    return this.potions;
-  },
-  addPotion(newPotion) {
-    for (item of this.potions) {
-      // console.log(Object.values(item));
-      // console.log(newPotion.name);
+//   getPotions() {
+//     return this.potions;
+//   },
+//   addPotion(newPotion) {
+//     for (item of this.potions) {
+//       // console.log(Object.values(item));
+//       // console.log(newPotion.name);
 
-      if (Object.values(item).includes(newPotion.name)) {
-        return `Error! Potion ${newPotion.name} is already in your inventory!`;
-      }
-    }
-    return this.potions.push(newPotion);
-  },
+//       if (Object.values(item).includes(newPotion.name)) {
+//         return `Error! Potion ${newPotion.name} is already in your inventory!`;
+//       }
+//     }
+//     return this.potions.push(newPotion);
+//   },
 
-  removePotion(potionName) {
-    for (let i = 0; i < this.potions.length; i += 1) {
-      // console.log(i);
-      // console.log(potionName);
+//   removePotion(potionName) {
+//     for (let i = 0; i < this.potions.length; i += 1) {
+//       // console.log(i);
+//       // console.log(potionName);
 
-      if (this.potions[i].name === potionName) {
-        // console.log(i);
-        // console.log(this.potions.splice(i, 1));
+//       if (this.potions[i].name === potionName) {
+//         // console.log(i);
+//         // console.log(this.potions.splice(i, 1));
 
-        // console.log(this.potions);
-        // console.log(this.potions[i]);
-        return this.potions.splice(i, 1);
-      }
-    }
-    // return `Potion ${potionName} is not in inventory!`;
-  },
-  updatePotionName(oldName, newName) {
-    for (let i = 0; i < this.potions.length; i += 1) {
-      // console.log(this.potions[i].name === oldName);
+//         // console.log(this.potions);
+//         // console.log(this.potions[i]);
+//         return this.potions.splice(i, 1);
+//       }
+//     }
+//     // return `Potion ${potionName} is not in inventory!`;
+//   },
+//   updatePotionName(oldName, newName) {
+//     for (let i = 0; i < this.potions.length; i += 1) {
+//       // console.log(this.potions[i].name === oldName);
 
-      if (this.potions[i].name === oldName) {
-        console.log(i);
-        console.log((this.potions[i].name = newName));
-        return (this.potions[i].name = newName);
-        // return `Potion ${oldName} is not in inventory!`;
-      }
+//       if (this.potions[i].name === oldName) {
+//         console.log(i);
+//         console.log((this.potions[i].name = newName));
+//         return (this.potions[i].name = newName);
+//         // return `Potion ${oldName} is not in inventory!`;
+//       }
 
-      // console.log(this.potions.splice(potionIndex, 1, newName));
-      // return this.potions.splice(potionIndex, 1, newName);
-    }
-    return `Potion ${oldName} is not in inventory!`;
-  },
-  // Change code above this line
-};
-oldName = "Dragon breath";
-newName = "Polymorth";
+//       // console.log(this.potions.splice(potionIndex, 1, newName));
+//       // return this.potions.splice(potionIndex, 1, newName);
+//     }
+//     return `Potion ${oldName} is not in inventory!`;
+//   },
+//   // Change code above this line
+// };
+// oldName = "Dragon breath";
+// newName = "Polymorth";
 // newPotion = { name: "Stone skin", price: 240 };
-potionName = "Dragon breat";
+// potionName = "Dragon breat";
 // newPotion = { name: "Invisibility", price: 620 };
 
 // console.log(atTheOldToad.potions); ---------------як вивсести результат в консоль?
@@ -1277,5 +1277,5 @@ potionName = "Dragon breat";
 // повертає рядок "Error! Potion Dragon breath is already in your inventory!"
 // console.log(atTheOldToad.removePotion(potionName));
 // видаляє name: "Dragon breath", price: 700
-console.log(atTheOldToad.updatePotionName(oldName, newName));
-console.log(atTheOldToad.potions);
+// console.log(atTheOldToad.updatePotionName(oldName, newName));
+// console.log(atTheOldToad.potions);
