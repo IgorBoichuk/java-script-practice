@@ -1542,3 +1542,575 @@
 // };
 
 // console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
+
+//
+
+//
+
+//
+
+//
+
+//
+
+// Заміни оголошення функції filterArray() і колбек для методу forEach() на стрілочні функції.
+// Виклик функції filterArray([12, 24, 8, 41, 76], 20) повертає [24, 41, 76]
+
+// Change code below this line
+// const filterArray = (numbers, value) => {
+//   const filteredNumbers = [];
+
+//   numbers.forEach((number) => {
+//     if (number > value) {
+//       filteredNumbers.push(number);
+//     }
+//   });
+
+//   // Change code above this line
+//   return filteredNumbers;
+// };
+
+// console.log(filterArray([12, 24, 8, 41, 76], 20));
+
+//
+
+//
+
+//
+
+//
+
+//
+
+// Заміни оголошення функції getCommonElements() і колбек для методу forEach() на стрілочні функції.
+// Виклик getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]) повертає [10, 30, 40]
+
+// const getCommonElements = (firstArray, secondArray) => {
+//   const commonElements = [];
+
+//   firstArray.forEach((element) => {
+//     if (secondArray.includes(element)) {
+//       commonElements.push(element);
+//     }
+//   });
+
+//   // Change code above this line
+//   return commonElements;
+// };
+
+// console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]));
+
+//
+
+//
+
+//
+
+//
+
+//
+
+// Функція changeEven(numbers, value) приймає масив чисел numbers і оновлює кожен елемент,
+// значення якого - це парне число, додаючи до нього значення параметра value.
+
+// Виконай рефакторинг функції таким чином, щоб вона стала чистою - не змінювала масив
+// чисел numbers, а створювала, наповнювала і повертала новий масив з оновленими значеннями.
+// Виклик changeEven([44, 13, 81, 92, 36, 54], 100) повертає новий масив [144, 13, 81, 192, 136, 154]
+
+// function changeEven(numbers, value) {
+//   // Change code below this line
+//   let newArray = [];
+//   // for (let i = 0; i < numbers.length; i += 1) {
+//   //   if (numbers[i] % 2 === 0) {
+//   //     numbers[i] = numbers[i] + value;
+//   //   }
+//   //   newArray.push(numbers[i]);
+//   //   console.log(numbers);
+//   // }
+//   numbers.forEach((number) => {
+//     if (number % 2 === 0) {
+//       number = number + value;
+//     }
+//     newArray.push(number);
+//     console.log(numbers);
+//   });
+//   return newArray;
+//   // Change code above this line
+// }
+
+// console.log(changeEven([44, 13, 81, 92, 36, 54], 100));
+
+//
+
+//
+
+//
+
+//
+
+//
+// const planets = ["Earth", "Mars", "Venus", "Jupiter"];
+// // Change code below this line
+
+// const planetsLengths = planets;
+// console.log(planets);
+// console.log(planets.map((planet) => planet.length));
+
+//
+
+//
+
+//
+
+//
+
+//
+
+// Використовуючи метод map(), зроби так, щоб у змінній titles вийшов масив назв
+// книг (властивість title) з усіх об'єктів масиву books.
+// Значення змінної titles - це масив ["The Last Kingdom", "Beside Still Waters", "The Dream of a Ridiculous Man", "Redder Than Blood", "Enemy of God"]
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+// // Change code below this line
+
+// const titles = books.map((bookTitles) => bookTitles.title);
+// console.log(titles);
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+// Доповни функцію getUserNames(users) таким чином, щоб вона повертала масив імен
+// користувачів (властивість name) з масиву об'єктів в параметрі users.
+
+// Change code below this line
+// const getUserNames = (users) => {
+//   return users.map((user) => user.name);
+// };
+
+// // Change code above this line
+// console.log(
+//   getUserNames([
+//     {
+//       name: "Moore Hensley",
+//       email: "moorehensley@indexia.com",
+//       eyeColor: "blue",
+//       friends: ["Sharron Pace"],
+//       isActive: false,
+//       balance: 2811,
+//       skills: ["ipsum", "lorem"],
+//       gender: "male",
+//       age: 37,
+//     },
+//     {
+//       name: "Sharlene Bush",
+//       email: "sharlenebush@tubesys.com",
+//       eyeColor: "blue",
+//       friends: ["Briana Decker", "Sharron Pace"],
+//       isActive: true,
+//       balance: 3821,
+//       skills: ["tempor", "mollit", "commodo", "veniam", "laborum"],
+//       gender: "female",
+//       age: 34,
+//     },
+//   ])
+// );
+// Доповни код таким чином, щоб у змінній allGenres був масив всіх жанрів книг
+// (властивість genres) з масиву books, а у змінній uniqueGenres - масив унікальних жанрів, без повторень.
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     genres: ["adventure", "history"],
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     genres: ["fiction", "mysticism"],
+//   },
+//   {
+//     title: "Redder Than Blood",
+//     author: "Tanith Lee",
+//     genres: ["horror", "mysticism", "adventure"],
+//   },
+// ];
+// // Change code below this line
+// const allGenres = books.flatMap((genre) => genre.genres);
+// const uniqueGenres = allGenres.filter(
+//   (genre, index) => allGenres.indexOf(genre) === index
+// );
+
+// console.log(allGenres);
+// console.log(uniqueGenres);
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+// Використовуючи метод filter(), доповни код таким чином, щоб:
+// У змінній topRatedBooks утворився масив книг, рейтинг яких (властивість rating)
+// більший за або дорівнює значенню змінної MIN_RATING.
+// У змінній booksByAuthor утворився масив книг, написаних автором з ім'ям (властивість author),
+// яке збігається зі значенням у змінній AUTHOR.
+// Значення змінної topRatedBooks - це масив книг з рейтингом, вищим за 8
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+
+// const MIN_RATING = 8;
+// const AUTHOR = "Bernard Cornwell";
+// // Change code below this line
+
+// const topRatedBooks = books.filter((item) => item.rating >= MIN_RATING);
+// const booksByAuthor = books.filter((item) => item.author === AUTHOR);
+
+// console.log(topRatedBooks);
+// console.log(booksByAuthor);
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+// Доповни функцію getUsersWithEyeColor(users, color) таким чином, щоб вона повертала
+// масив користувачів, у яких колір очей (властивість eyeColor) збігається зі значенням параметра color.
+
+// Change code below this line
+// const getUsersWithEyeColor = (users, color) => {
+//   const newArray = users.filter((user) => user.eyeColor === color);
+
+//   return newArray;
+// };
+// // Change code above this line
+// console.log(
+//   getUsersWithEyeColor(
+//     [
+//       {
+//         name: "Moore Hensley",
+//         email: "moorehensley@indexia.com",
+//         eyeColor: "blue",
+//         friends: ["Sharron Pace"],
+//         isActive: false,
+//         balance: 2811,
+//         gender: "male",
+//       },
+//       {
+//         name: "Sharlene Bush",
+//         email: "sharlenebush@tubesys.com",
+//         eyeColor: "blue",
+//         friends: ["Briana Decker", "Sharron Pace"],
+//         isActive: true,
+//         balance: 3821,
+//         gender: "female",
+//       },
+//       {
+//         name: "Ross Vazquez",
+//         email: "rossvazquez@xinware.com",
+//         eyeColor: "green",
+//         friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//         isActive: false,
+//         balance: 3793,
+//         gender: "male",
+//       },
+//       {
+//         name: "Elma Head",
+//         email: "elmahead@omatom.com",
+//         eyeColor: "green",
+//         friends: ["Goldie Gentry", "Aisha Tran"],
+//         isActive: true,
+//         balance: 2278,
+//         gender: "female",
+//       },
+//       {
+//         name: "Carey Barr",
+//         email: "careybarr@nurali.com",
+//         eyeColor: "blue",
+//         friends: ["Jordan Sampson", "Eddie Strong"],
+//         isActive: true,
+//         balance: 3951,
+//         gender: "male",
+//       },
+//       {
+//         name: "Blackburn Dotson",
+//         email: "blackburndotson@furnigeer.com",
+//         eyeColor: "brown",
+//         friends: ["Jacklyn Lucas", "Linda Chapman"],
+//         isActive: false,
+//         balance: 1498,
+//         gender: "male",
+//       },
+//       {
+//         name: "Sheree Anthony",
+//         email: "shereeanthony@kog.com",
+//         eyeColor: "brown",
+//         friends: ["Goldie Gentry", "Briana Decker"],
+//         isActive: true,
+//         balance: 2764,
+//         gender: "female",
+//       },
+//     ],
+//     "brown"
+//   )
+// );
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+// Доповни функцію getUsersWithAge(users, minAge, maxAge) таким чином, щоб вона
+// повертала масив користувачів, вік яких (властивість age) потрапляє у проміжок від minAge до maxAge.
+
+// Change code below this line
+// const getUsersWithAge = (users, minAge, maxAge) => {
+//   const newArray = users.filter(
+//     (item) => item.age > minAge && item.age < maxAge
+//   );
+
+//   console.log(minAge);
+//   console.log(maxAge);
+//   return newArray;
+// };
+// console.log(
+//   getUsersWithAge(
+//     [
+//       {
+//         name: "Moore Hensley",
+//         email: "moorehensley@indexia.com",
+//         eyeColor: "blue",
+//         friends: ["Sharron Pace"],
+//         isActive: false,
+//         balance: 2811,
+//         gender: "male",
+//         age: 37,
+//       },
+//       {
+//         name: "Sharlene Bush",
+//         email: "sharlenebush@tubesys.com",
+//         eyeColor: "blue",
+//         friends: ["Briana Decker", "Sharron Pace"],
+//         isActive: true,
+//         balance: 3821,
+//         gender: "female",
+//         age: 34,
+//       },
+//       {
+//         name: "Ross Vazquez",
+//         email: "rossvazquez@xinware.com",
+//         eyeColor: "green",
+//         friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//         isActive: false,
+//         balance: 3793,
+//         gender: "male",
+//         age: 24,
+//       },
+//       {
+//         name: "Elma Head",
+//         email: "elmahead@omatom.com",
+//         eyeColor: "green",
+//         friends: ["Goldie Gentry", "Aisha Tran"],
+//         isActive: true,
+//         balance: 2278,
+//         gender: "female",
+//         age: 21,
+//       },
+//       {
+//         name: "Carey Barr",
+//         email: "careybarr@nurali.com",
+//         eyeColor: "blue",
+//         friends: ["Jordan Sampson", "Eddie Strong"],
+//         isActive: true,
+//         balance: 3951,
+//         gender: "male",
+//         age: 27,
+//       },
+//       {
+//         name: "Blackburn Dotson",
+//         email: "blackburndotson@furnigeer.com",
+//         eyeColor: "brown",
+//         friends: ["Jacklyn Lucas", "Linda Chapman"],
+//         isActive: false,
+//         balance: 1498,
+//         gender: "male",
+//         age: 38,
+//       },
+//       {
+//         name: "Sheree Anthony",
+//         email: "shereeanthony@kog.com",
+//         eyeColor: "brown",
+//         friends: ["Goldie Gentry", "Briana Decker"],
+//         isActive: true,
+//         balance: 2764,
+//         gender: "female",
+//         age: 39,
+//       },
+//     ],
+//     80,
+//     100
+//   )
+// );
+// // Change code above this line
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+// const getFriends = (users) => {
+//   const newArray = users.flatMap((user) => user.friends);
+//   const rightArray = newArray.filter(
+//     (item, index) => newArray.indexOf(item) === index
+//   );
+//   console.log(rightArray);
+// };
+// console.log(
+//   getFriends([
+//     {
+//       name: "Moore Hensley",
+//       email: "moorehensley@indexia.com",
+//       eyeColor: "blue",
+//       friends: ["Sharron Pace"],
+//       isActive: false,
+//       balance: 2811,
+//       gender: "male",
+//       age: 37,
+//     },
+//     {
+//       name: "Sharlene Bush",
+//       email: "sharlenebush@tubesys.com",
+//       eyeColor: "blue",
+//       friends: ["Briana Decker", "Sharron Pace"],
+//       isActive: true,
+//       balance: 3821,
+//       gender: "female",
+//       age: 34,
+//     },
+//     {
+//       name: "Ross Vazquez",
+//       email: "rossvazquez@xinware.com",
+//       eyeColor: "green",
+//       friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//       isActive: false,
+//       balance: 3793,
+//       gender: "male",
+//       age: 24,
+//     },
+//     {
+//       name: "Elma Head",
+//       email: "elmahead@omatom.com",
+//       eyeColor: "green",
+//       friends: ["Goldie Gentry", "Aisha Tran"],
+//       isActive: true,
+//       balance: 2278,
+//       gender: "female",
+//       age: 21,
+//     },
+//     {
+//       name: "Carey Barr",
+//       email: "careybarr@nurali.com",
+//       eyeColor: "blue",
+//       friends: ["Jordan Sampson", "Eddie Strong"],
+//       isActive: true,
+//       balance: 3951,
+//       gender: "male",
+//       age: 27,
+//     },
+//     {
+//       name: "Blackburn Dotson",
+//       email: "blackburndotson@furnigeer.com",
+//       eyeColor: "brown",
+//       friends: ["Jacklyn Lucas", "Linda Chapman"],
+//       isActive: false,
+//       balance: 1498,
+//       gender: "male",
+//       age: 38,
+//     },
+//     {
+//       name: "Sheree Anthony",
+//       email: "shereeanthony@kog.com",
+//       eyeColor: "brown",
+//       friends: ["Goldie Gentry", "Briana Decker"],
+//       isActive: true,
+//       balance: 2764,
+//       gender: "female",
+//       age: 39,
+//     },
+//   ])
+// );
