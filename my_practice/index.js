@@ -2805,3 +2805,58 @@
 
 // console.log(ascendingReleaseDates);
 // console.log(descendingReleaseDates);
+
+//
+
+//
+
+//
+
+//
+
+//
+
+// Завдання 40 / 48
+
+// Онлайн бібіліотеці необхідно відображати книги, відсортовані за
+// автором, в алфавітному і зворотному алфавітному порядку.
+// Доповни код таким чином, щоб у змінній authorsInAlphabetOrder вийшла
+// копія масиву authors, відсортована за алфавітом, а у змінній
+// authorsInReversedOrder - копія, відсортована у зворотному алфавітному порядку.
+
+// const authors = [
+//   "Tanith Lee",
+//   "Bernard Cornwell",
+//   "Robert Sheckley",
+//   "Fyodor Dostoevsky",
+//   "Howard Lovecraft",
+// ];
+// // Change code below this line
+
+// const authorsInAlphabetOrder = [...authors].sort((a, b) => a.localeCompare(b));
+// const authorsInReversedOrder = [...authors].sort((a, b) => b.localeCompare(a));
+
+// console.log(authorsInAlphabetOrder);
+// console.log(authorsInReversedOrder);
+
+//
+
+//
+
+//
+
+//
+
+//
+
+// Завдання 41/48
+
+// Доповни код таким чином, щоб:
+// У змінній sortedByAuthorName вийшов масив книг,
+//     відсортований за ім'ям автора в алфавітному порядку.
+// У змінній sortedByReversedAuthorName вийшов масив книг,
+//     відсортований за ім'ям автора у зворотному алфавітному порядку.
+// У змінній sortedByAscendingRating вийшов масив книг,
+//     відсортований за зростанням рейтингу.
+// У змінній sortedByDescentingRating вийшов масив книг,
+//     відсортований за спаданням рейтингу.
