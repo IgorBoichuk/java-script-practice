@@ -2890,21 +2890,13 @@ const books = [
 ];
 // Change code below this line
 
-const sortedByAuthorName = books
-  .flatMap((book) => book.author)
-  .sort((a, b) => a.localeCompare(b));
+const sortedByAuthorName = books;
 
-const sortedByReversedAuthorName = books
-  .flatMap((book) => book.author)
-  .sort((a, b) => b.localeCompare(a));
+const sortedByReversedAuthorName = books;
 
-const sortedByAscendingRating = books
-  .flatMap((book) => book.title)
-  .sort((a, b) => a.localeCompare(b));
+const sortedByAscendingRating = books;
 
-const sortedByDescentingRating = books
-  .flatMap((book) => book.title)
-  .sort((a, b) => b.localeCompare(a));
+const sortedByDescentingRating = books;
 
 console.log(sortedByAuthorName);
 console.log(sortedByReversedAuthorName);
