@@ -2560,6 +2560,7 @@ const players = [
 ];
 // Change code below this line
 
-const totalAveragePlaytimePerGame = players.forEach((item) => 
-   return item.playtime / 4);
+const totalAveragePlaytimePerGame = players.reduce((time, played) => {
+  return time + played.playtime / played.gamesPlayed;
+}, 0);
 console.log(totalAveragePlaytimePerGame);
