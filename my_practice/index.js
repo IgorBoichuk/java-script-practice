@@ -3496,3 +3496,99 @@
 //     "female"
 //   )
 // );
+
+// const historyService = {
+//   orders: [
+//     { email: "jacob@hotmail.com", dish: "Burrito" },
+//     { email: "solomon@topmail.net", dish: "Burger" },
+//     { email: "artemis@coldmail.net", dish: "Pizza" },
+//     { email: "solomon@topmail.net", dish: "Apple pie" },
+//     { email: "jacob@hotmail.com", dish: "Taco" },
+//   ],
+//   // Change code below this line
+//   getOrdersLog() {
+//     return this.orders
+//       .map((order) => `email: ${order.email} dish: ${order.dish}`)
+//       .join(" - ");
+//   },
+//   getEmails() {
+//     const emails = this.orders.map((order) => order.email);
+//     const uniqueEmails = new Set(emails);
+//     return [...uniqueEmails];
+//   },
+//   getOrdersByEmail(email) {
+//     return this.orders.filter((order) => order.email === email);
+//   },
+//   // Change code above this line
+// };
+
+// // console.log(historyService.getOrdersByEmail("solomon@topmail.net"));
+// console.log(historyService.getOrdersLog());
+// console.log(historyService.getEmails());
+// console.log(historyService.getOrdersByEmail("solomon@topmail.net"));
+
+//
+
+//
+
+//
+
+//
+//
+
+//
+
+//
+
+//
+
+// class Car {
+//   // Change code below this line
+//   constructor(brand, model, price) {
+//     this.brand = brand;
+//     this.model = model;
+//     this.price = price;
+//   }
+
+//   // Change code above this line
+// }
+// const carParams = new Car("Audi", "A8", "20000");
+// return carParams;
+
+//
+
+//
+
+//
+
+//
+//
+
+//
+
+//
+
+//
+// Завдання 10/20
+
+// Напиши клас Storage, який буде створювати об'єкти для управління складом товарів.
+// Клас очікує тільки один аргумент - початковий масив товарів, який записується у
+// властивість items об'єкта, що створюється.
+
+// Оголоси наступні методи класу:
+
+// getItems() - повертає масив поточних товарів у властивості items об'єкта, який викликає цей метод.
+// addItem(newItem) - приймає новий товар newItem і додає його в масив товарів у
+// властивості items об'єкта, який викликає цей метод.
+// removeItem(itemToRemove) - приймає товар itemToRemove і видаляє його з масиву
+// товарів у властивості items об'єкта, який викликає цей метод.
+// Під коментарем ми додали ініціалізацію екземпляра і виклики методів у тій
+// послідовності, в якій твій код перевірятимуть тести. Будь ласка, нічого там не змінюй.
+
+// Change code above this line
+const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+storage.addItem("Droid");
+console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+storage.removeItem("Prolonger");
+console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
