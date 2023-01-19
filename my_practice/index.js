@@ -1785,7 +1785,7 @@
 //
 // Використовуючи метод filter(), доповни код таким чином, щоб:
 // У змінній topRatedBooks утворився масив книг, рейтинг яких (властивість rating)
-// більший за або дорівнює значенню змінної MIN_RATING.
+// більший за або дорівнює значенню змінної MINRATING.
 // У змінній booksByAuthor утворився масив книг, написаних автором з ім'ям (властивість author),
 // яке збігається зі значенням у змінній AUTHOR.
 // Значення змінної topRatedBooks - це масив книг з рейтингом, вищим за 8
@@ -1810,11 +1810,11 @@
 //   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
 // ];
 
-// const MIN_RATING = 8;
+// const MINRATING = 8;
 // const AUTHOR = "Bernard Cornwell";
 // // Change code below this line
 
-// const topRatedBooks = books.filter((item) => item.rating >= MIN_RATING);
+// const topRatedBooks = books.filter((item) => item.rating >= MINRATING);
 // const booksByAuthor = books.filter((item) => item.author === AUTHOR);
 
 // console.log(topRatedBooks);
@@ -2227,10 +2227,10 @@
 // Використовуючи метод find(), доповни код таким чином, щоб:
 
 // У змінній bookWithTitle утворився об'єкт книги, назва якої (властивість title)
-// збігається зі значенням змінної BOOK_TITLE.
+// збігається зі значенням змінної BOOKTITLE.
 // У змінній bookByAuthor утворився об'єкт книги, автор якої (властивість author)
 // збігається зі значенням змінної AUTHOR.
-// Значення змінної BOOK_TITLE - це рядок "The Dream of a Ridiculous Man"
+// Значення змінної BOOKTITLE - це рядок "The Dream of a Ridiculous Man"
 // Значення змінної AUTHOR - це рядок "Robert Sheckley"
 
 // const books = [
@@ -2251,11 +2251,11 @@
 //   },
 //   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
 // ];
-// const BOOK_TITLE = "The Dream of a Ridiculous Man";
+// const BOOKTITLE = "The Dream of a Ridiculous Man";
 // const AUTHOR = "Robert Sheckley";
 // // Change code below this line
 
-// const bookWithTitle = books.find((item) => item.title === BOOK_TITLE);
+// const bookWithTitle = books.find((item) => item.title === BOOKTITLE);
 // const bookByAuthor = books.find((item) => item.author === AUTHOR);
 
 // console.log(bookWithTitle);
@@ -3176,7 +3176,7 @@
 // Завдання 45/48
 // Доповни код таким чином, щоб у змінній names вийшов масив імен
 // авторів в алфавітному порядку, рейтинг книг яких більший за значення
-// змінної MIN_BOOK_RATING.
+// змінної MINBOOKRATING.
 
 // const books = [
 //   {
@@ -3201,11 +3201,11 @@
 //     rating: 8.67,
 //   },
 // ];
-// const MIN_BOOK_RATING = 8;
+// const MINBOOKRATING = 8;
 // // Change code below this line
 
 // const names = books
-//   .filter((book) => book.rating > MIN_BOOK_RATING)
+//   .filter((book) => book.rating > MINBOOKRATING)
 //   .map((book) => book.author)
 //   .sort((a, b) => a.localeCompare(b));
 
@@ -3699,14 +3699,125 @@
 // getBrand() - повертає значення приватної властивості brand.
 // changeBrand(newBrand) - змінює значення приватної властивості brand на newBrand.
 
+// class Car {
+//   // Change code below this line
+//   #brand;
+//   constructor({ brand, model, price }) {
+//     this.#brand = brand;
+//     this.model = model;
+//     this.price = price;
+//   }
+//   getBrand() {
+//     return this.#brand;
+//   }
+//   changeBrand(newBrand) {
+//     this.#brand = newBrand;
+//   }
+//   // Change code above this line
+// }
+
+//
+
+//
+
+//
+//
+
+//
+
+//
+
+//
+
+// Завдання 15/20
+
+// Виконай рефакторинг класу Car.Зроби властивості model і price приватними,
+// а також #brand.
+// Стандартизуй публічний інтерфейс класу, замінивши вже
+// оголошені методи на гетери та сетери brand, model і price, для взаємодії з
+// приватними властивостями.
+
+// class Car {
+//   // Change code below this line
+//   #brand;
+//   #model;
+//   #price;
+
+//   constructor({ brand, model, price }) {
+//     this.#brand = brand;
+//     this.#model = model;
+//     this.#price = price;
+//   }
+
+//   get brand() {
+//     return this.#brand;
+//   }
+
+//   set brand(newBrand) {
+//     this.#brand = newBrand;
+//   }
+
+//   get model() {
+//     return this.#model;
+//   }
+
+//   set model(newModel) {
+//     this.#model = newModel;
+//   }
+
+//   get price() {
+//     return this.#price;
+//   }
+
+//   set price(newPrice) {
+//     this.#price = newPrice;
+//   }
+//   // Change code above this line
+// }
+//
+
+//
+
+//
+//
+
+//
+
+//
+
+//
+// Завдання 16 / 20
+
+// Виконай рефакторинг класу Car.Додай публічну статичну властивість
+// MAX_PRICE зі значенням 50000 - максимально допустима ціна автомобіля.
+
+// Додай сетеру price перевірку значення параметра newPrice, що передається.
+// Якщо воно більше за MAX_PRICE, сеттер нічого не робить, а якщо менше
+// або дорівнює, то перезаписує ціну автомобіля.
+
 class Car {
   // Change code below this line
+  #price;
 
-  constructor({ brand, model, price }) {
-    this.brand = brand;
-    this.model = model;
-    this.price = price;
+  constructor({ price }) {
+    this.#price = price;
   }
 
+  get price() {
+    return this.#price;
+  }
+
+  set price(newPrice) {
+    this.#price = newPrice;
+  }
   // Change code above this line
 }
+
+const audi = new Car({ price: 35000 });
+console.log(audi.price); // 35000
+
+audi.price = 49000;
+console.log(audi.price); // 49000
+
+audi.price = 51000;
+console.log(audi.price); // 49000
