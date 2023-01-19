@@ -3584,6 +3584,10 @@
 // товарів у властивості items об'єкта, який викликає цей метод.
 // Під коментарем ми додали ініціалізацію екземпляра і виклики методів у тій
 // послідовності, в якій твій код перевірятимуть тести. Будь ласка, нічого там не змінюй.
+// В результаті виклику new Storage(["Nanitoids", "Prolonger", "Antigravitator"]) значення
+// змінної storage - це об'єкт
+
+class Storage {}
 
 // Change code above this line
 const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
