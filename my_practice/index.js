@@ -3874,3 +3874,44 @@
 
 // console.log(Car.checkPrice(audi.price)); // "Success! Price is within acceptable limits"
 // console.log(Car.checkPrice(bmw.price)); // "Error! Price exceeds the maximum"
+
+//
+
+//
+
+//
+//
+
+//
+
+//
+
+//
+
+// Завдання 18/20
+// У застосунку потрібен адміністратор з можливістю додавати пошти користувачів
+// у чорний список.
+
+// Оголоси клас Admin, який наслідує від класу User
+// Додай класу Admin публічну статичну властивість AccessLevel(рівень доступу),
+// значення якої — це об'єкт {BASIC: "basic", SUPERUSER: "superuser"}
+
+// class User {
+//   constructor(email) {
+//     this.email = email;
+//   }
+
+//   get email() {
+//     return this.email;
+//   }
+
+//   set email(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
+// // Change code below this line
+// class Admin extends User {
+//   static AccessLevel = { BASIC: "basic", SUPERUSER: "superuser" };
+//   constructor(BASIC, SUPERUSER) {}
+//   AccessLevel = { BASIC: "basic", SUPERUSER: "superuser" };
+// }
